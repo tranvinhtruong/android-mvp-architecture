@@ -67,11 +67,13 @@ public class OpenSourceAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         switch (viewType) {
             case VIEW_TYPE_NORMAL:
                 return new ViewHolder(
-                        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_repo_view, parent, false));
+                        LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.item_repo_view, parent, false));
             case VIEW_TYPE_EMPTY:
             default:
                 return new EmptyViewHolder(
-                        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_empty_view, parent, false));
+                        LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.item_empty_view, parent, false));
         }
     }
 

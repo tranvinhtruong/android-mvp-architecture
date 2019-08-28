@@ -119,11 +119,14 @@ public class RateUsDialog extends BaseDialog implements RatingDialogMvpView {
 
         LayerDrawable stars = (LayerDrawable) mRatingBar.getProgressDrawable();
         stars.getDrawable(2)
-                .setColorFilter(ContextCompat.getColor(getContext(), R.color.yellow), PorterDuff.Mode.SRC_ATOP);
+                .setColorFilter(ContextCompat.getColor(getContext(), R.color.yellow),
+                        PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(0)
-                .setColorFilter(ContextCompat.getColor(getContext(), R.color.shadow), PorterDuff.Mode.SRC_ATOP);
+                .setColorFilter(ContextCompat.getColor(getContext(), R.color.shadow),
+                        PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(1)
-                .setColorFilter(ContextCompat.getColor(getContext(), R.color.shadow), PorterDuff.Mode.SRC_ATOP);
+                .setColorFilter(ContextCompat.getColor(getContext(), R.color.shadow),
+                        PorterDuff.Mode.SRC_ATOP);
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override

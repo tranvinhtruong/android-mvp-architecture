@@ -34,7 +34,7 @@ public class RatingDialogPresenter<V extends RatingDialogMvpView> extends BasePr
 
     public static final String TAG = "RatingDialogPresenter";
 
-    private boolean isRatingSecondaryActionShown = false;
+    private boolean mIsRatingSecondaryActionShown = false;
 
     @Inject
     public RatingDialogPresenter(DataManager dataManager,
@@ -51,7 +51,7 @@ public class RatingDialogPresenter<V extends RatingDialogMvpView> extends BasePr
             return;
         }
 
-        if (!isRatingSecondaryActionShown) {
+        if (!mIsRatingSecondaryActionShown) {
             if (rating == 5) {
                 getMvpView().showPlayStoreRatingView();
                 getMvpView().hideSubmitButton();
@@ -59,7 +59,7 @@ public class RatingDialogPresenter<V extends RatingDialogMvpView> extends BasePr
             } else {
                 getMvpView().showRatingMessageView();
             }
-            isRatingSecondaryActionShown = true;
+            mIsRatingSecondaryActionShown = true;
             return;
         }
 
