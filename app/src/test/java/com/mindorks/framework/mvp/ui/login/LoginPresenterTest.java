@@ -28,7 +28,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import io.reactivex.Observable;
+import io.reactivex.Single;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.TestScheduler;
 
@@ -73,7 +73,7 @@ public class LoginPresenterTest {
 
         LoginResponse loginResponse = new LoginResponse();
 
-        doReturn(Observable.just(loginResponse))
+        doReturn(Single.just(loginResponse))
                 .when(mMockDataManager)
                 .doServerLoginApiCall(new LoginRequest
                         .ServerLoginRequest(email, password));
